@@ -4,6 +4,66 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.126.0](https://github.com/promptfoo/promptfoo/compare/0.125.1...0.126.0) (2026-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* **evaluator:** restrict derived metric formulas ([#12125](https://github.com/promptfoo/promptfoo/issues/12125))
+
+### Features
+
+* **providers:** refresh OpenAI model support on Bedrock ([#12141](https://github.com/promptfoo/promptfoo/issues/12141)) ([059c749](https://github.com/promptfoo/promptfoo/commit/059c74971dbfb2d07f08c381c8a4c2bb44797817))
+* **providers:** support Gemini file transcription through Interactions ([#12151](https://github.com/promptfoo/promptfoo/issues/12151)) ([738e434](https://github.com/promptfoo/promptfoo/commit/738e434d3e545fb956ae1265ae139f8c902510fc))
+* **providers:** support Gemini Live and Vertex file transcription ([#12153](https://github.com/promptfoo/promptfoo/issues/12153)) ([7fda531](https://github.com/promptfoo/promptfoo/commit/7fda531c79036328e310e498d74f26ee9c1dcbfe))
+* **providers:** support GPT Image 2.6 generation and edits ([#12134](https://github.com/promptfoo/promptfoo/issues/12134)) ([7c90c8a](https://github.com/promptfoo/promptfoo/commit/7c90c8a71f464751234a8606767dcb17e3e899ba))
+* **providers:** support GPT-5.6 Cyber on Bedrock ([#12137](https://github.com/promptfoo/promptfoo/issues/12137)) ([dc99c26](https://github.com/promptfoo/promptfoo/commit/dc99c26c650ff49105927c7c99788409e9ba8f26))
+* **providers:** support Sol Ultrafast ([#11547](https://github.com/promptfoo/promptfoo/issues/11547)) ([67651ef](https://github.com/promptfoo/promptfoo/commit/67651ef13adb9a3b621335a56bcc3264b7c9b3d1))
+
+
+### Bug Fixes
+
+* **assertions:** dont count tool calls as refusals ([#11957](https://github.com/promptfoo/promptfoo/issues/11957)) ([5ca33a6](https://github.com/promptfoo/promptfoo/commit/5ca33a6c4195248387f199e7ac30352812d6bc5b))
+* **assertions:** fail throwing file:// and package: JavaScript assertions instead of erroring the row ([#11939](https://github.com/promptfoo/promptfoo/issues/11939)) ([8399f76](https://github.com/promptfoo/promptfoo/commit/8399f767d2410f3076109b8ec9670051f603617e))
+* **deps:** update anthropic packages ([#11991](https://github.com/promptfoo/promptfoo/issues/11991)) ([204cf8f](https://github.com/promptfoo/promptfoo/commit/204cf8f2fa5cd92661b041a32a39276e7a83a7d3))
+* **deps:** update anthropic packages ([#12050](https://github.com/promptfoo/promptfoo/issues/12050)) ([44ef3dc](https://github.com/promptfoo/promptfoo/commit/44ef3dc7598b8c3658d92e9c3c76de102038eef5))
+* **deps:** update Azure Identity to use patched MSAL Node ([#12110](https://github.com/promptfoo/promptfoo/issues/12110)) ([923a1c5](https://github.com/promptfoo/promptfoo/commit/923a1c5fa0b2e6cce7b8bb285e1aadae820430eb))
+* **deps:** update dependency @anthropic-ai/sdk to v1 ([#12091](https://github.com/promptfoo/promptfoo/issues/12091)) ([bfb96e2](https://github.com/promptfoo/promptfoo/commit/bfb96e2ee2304ec87a7a32054a4907ea39f5c920))
+* **deps:** update dependency @anthropic-ai/sdk to v1.2.0 ([#12102](https://github.com/promptfoo/promptfoo/issues/12102)) ([6b9ae7b](https://github.com/promptfoo/promptfoo/commit/6b9ae7bcd12e7c67398b172c107def5a94b4fb66))
+* **deps:** update dependency @anthropic-ai/sdk to v1.3.0 ([#12113](https://github.com/promptfoo/promptfoo/issues/12113)) ([06778a3](https://github.com/promptfoo/promptfoo/commit/06778a39b27cb63345c23872d19503da012636cf))
+* **deps:** update dependency chokidar to v6 ([#12047](https://github.com/promptfoo/promptfoo/issues/12047)) ([b3cea64](https://github.com/promptfoo/promptfoo/commit/b3cea642ed1188832fe77f50de90e820b2a96cbb))
+* **deps:** update dependency ip-address to v10.7.5 ([#12123](https://github.com/promptfoo/promptfoo/issues/12123)) ([42f213f](https://github.com/promptfoo/promptfoo/commit/42f213f65bc5facec8f25432ffbf015cfb9adc67))
+* **deps:** update dependency js-yaml to v5.5.0 ([#11994](https://github.com/promptfoo/promptfoo/issues/11994)) ([9a212e7](https://github.com/promptfoo/promptfoo/commit/9a212e71207ab25ddfab1c4dafead8dfd71b458c))
+* **deps:** update dependency promptfoo to ^0.125.0 ([#12108](https://github.com/promptfoo/promptfoo/issues/12108)) ([eb106d8](https://github.com/promptfoo/promptfoo/commit/eb106d81116c854e213457b42b4bc0f6e4e404c3))
+* **deps:** update direct MSAL dependency to 7.1.0 ([#11970](https://github.com/promptfoo/promptfoo/issues/11970)) ([b4c2404](https://github.com/promptfoo/promptfoo/commit/b4c2404a0dee93dcd4d53a323d6f32f87ee27558))
+* **deps:** update gcp-metadata to v9.2.1 ([#11985](https://github.com/promptfoo/promptfoo/issues/11985)) ([111a782](https://github.com/promptfoo/promptfoo/commit/111a7829be4cd8ca2437db654d1804a68c6566da))
+* **deps:** update google-auth-library to v11.3.1 ([#11990](https://github.com/promptfoo/promptfoo/issues/11990)) ([bfe9709](https://github.com/promptfoo/promptfoo/commit/bfe97095b6d9eabd424021f004b13038068881d3))
+* **eval:** end only CLI evals on SIGTERM, after provider drain and OTel flush ([#11933](https://github.com/promptfoo/promptfoo/issues/11933)) ([b9433a0](https://github.com/promptfoo/promptfoo/commit/b9433a0bbc2dceb660f92c9d63911014a0b11f0d))
+* **evaluator:** restrict derived metric formulas ([#12125](https://github.com/promptfoo/promptfoo/issues/12125)) ([a98e6a0](https://github.com/promptfoo/promptfoo/commit/a98e6a05a3e46275b5bf90d5581a25920ec94d58))
+* **examples:** support Google ADK telemetry v2 ([#11956](https://github.com/promptfoo/promptfoo/issues/11956)) ([22df9a5](https://github.com/promptfoo/promptfoo/commit/22df9a560d4185c7584ed9302dc4f3b4ccacf5dd))
+* **providers:** enforce deadlines on buffered HTTP responses ([#12014](https://github.com/promptfoo/promptfoo/issues/12014)) ([5f31095](https://github.com/promptfoo/promptfoo/commit/5f310952972cbab4b56b23c0ae1414842e32c37c))
+* **providers:** follow Gemini API model redirects for controls and cost ([#12147](https://github.com/promptfoo/promptfoo/issues/12147)) ([a27e222](https://github.com/promptfoo/promptfoo/commit/a27e222759f7f9506a4a35846ba6352dbde9e683))
+* **providers:** handle publisher-qualified Vertex Llama model IDs ([#12148](https://github.com/promptfoo/promptfoo/issues/12148)) ([7d67362](https://github.com/promptfoo/promptfoo/commit/7d67362fa4ffd30d1a763f8649e09fc72a3ed985))
+* **providers:** honor AWS region settings on Bedrock ([#12139](https://github.com/promptfoo/promptfoo/issues/12139)) ([43c16e9](https://github.com/promptfoo/promptfoo/commit/43c16e9c77d6241925bc92c878c05179bb7aa4f2))
+* **providers:** honor multi-region Vertex Flash Image locations and prices ([#12152](https://github.com/promptfoo/promptfoo/issues/12152)) ([e2840e7](https://github.com/promptfoo/promptfoo/commit/e2840e74106e3ab7fe9f039f12223b2443394030))
+* **providers:** refresh Bedrock Nova profiles and video selection ([#12140](https://github.com/promptfoo/promptfoo/issues/12140)) ([67383bd](https://github.com/promptfoo/promptfoo/commit/67383bd6a39521020c67fc1319c9aeb21d347be5))
+* **providers:** refresh Veo examples and preserve JPEG input on Vertex ([#12150](https://github.com/promptfoo/promptfoo/issues/12150)) ([94fe64a](https://github.com/promptfoo/promptfoo/commit/94fe64a034ee23450206f031b41ef7fabce5e7e5))
+* **providers:** scope Snowflake and Cloudera endpoints ([#11900](https://github.com/promptfoo/promptfoo/issues/11900)) ([fbb4b9a](https://github.com/promptfoo/promptfoo/commit/fbb4b9ac76aa861be1331d981bbd42ba2b23de48))
+* **providers:** support current Bedrock Runtime models ([#11560](https://github.com/promptfoo/promptfoo/issues/11560)) ([69f84c3](https://github.com/promptfoo/promptfoo/commit/69f84c38377fb3a4d65de797c0c396804214045b))
+* **providers:** surface Cohere embedding API errors ([#12025](https://github.com/promptfoo/promptfoo/issues/12025)) ([424ee97](https://github.com/promptfoo/promptfoo/commit/424ee97973cb1c9a74045ec725c5e3d376902356))
+* **providers:** surface Mistral embedding API errors ([#12054](https://github.com/promptfoo/promptfoo/issues/12054)) ([df90acf](https://github.com/promptfoo/promptfoo/commit/df90acf562205a0308963ec147d0cfed73eb4f98))
+* **providers:** update OpenAI models and API compatibility ([#12009](https://github.com/promptfoo/promptfoo/issues/12009)) ([e3e2bb8](https://github.com/promptfoo/promptfoo/commit/e3e2bb871540ae153a630878ecb17e56cfb487e3))
+* **providers:** validate Gemini embedding options and vectors ([#12149](https://github.com/promptfoo/promptfoo/issues/12149)) ([821a1f6](https://github.com/promptfoo/promptfoo/commit/821a1f6005106c9e29bca7116dc2666cbd83af46))
+* **redteam:** upgrade the CloudSwag example to Anthropic v2 ([#11913](https://github.com/promptfoo/promptfoo/issues/11913)) ([6a5ee15](https://github.com/promptfoo/promptfoo/commit/6a5ee150ce2b1d5c44e88b5038a68f0300f04ece))
+* **tracing:** preserve OTLP receiver startup options ([#12083](https://github.com/promptfoo/promptfoo/issues/12083)) ([8f6b847](https://github.com/promptfoo/promptfoo/commit/8f6b847a48acab5a064edb1f849ff54b3e019530))
+* **util:** avoid extra samples for negative counts ([#11881](https://github.com/promptfoo/promptfoo/issues/11881)) ([1a19309](https://github.com/promptfoo/promptfoo/commit/1a193092dd602e3d7732d87251d76a7f3a5e9381))
+* **util:** handle invalid duration values ([#11878](https://github.com/promptfoo/promptfoo/issues/11878)) ([e8cef0e](https://github.com/promptfoo/promptfoo/commit/e8cef0e2bf9c4cc36316f193b4d28261d083458d))
+
+
+### Performance Improvements
+
+* **datasets:** read eval config instead of full results file ([#11989](https://github.com/promptfoo/promptfoo/issues/11989)) ([687571b](https://github.com/promptfoo/promptfoo/commit/687571b26f2c1fda89fc4c0ddb64caff01d8a4ab))
+
 ## [0.125.1](https://github.com/promptfoo/promptfoo/compare/0.125.0...0.125.1) (2026-10-25)
 
 ### Bug Fixes
